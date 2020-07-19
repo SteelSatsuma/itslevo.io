@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import './fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf';
 
-import App from './App';
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(

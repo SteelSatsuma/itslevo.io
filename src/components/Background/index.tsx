@@ -1,24 +1,26 @@
-import React,{ useState } from 'react';
+import React from 'react';
 import './style.css';
-
-const sourceString = 'underconstruction';
-
-const textArr: Array<string> = new Array(100).fill(sourceString);
-
-const text: string = textArr.join('')
 
 class Background extends React.Component{
 
-  state = {
-    sliceOffset: 0
+  sourceString: string = 'underconstruction'
+
+  readonly state = {
+    sliceOffset: 0,
+    text: new Array(100).fill(this.sourceString).join('')
   }
 
-  componentDidMount() {
-    window.setInterval(() => this.setState({ sliceOffset:  this.state.sliceOffset === sourceString.length ? 0 : ++this.state.sliceOffset }), 1000);
+  componentDidMount(): void {
+    window.setInterval(
+      () => this.setState({
+        sliceOffset:  this.state.sliceOffset > this.sourceString.length ? 0 : this.state.sliceOffset + 1
+      }),
+      1000
+    );
   }
 
-  render() {
-    const { sliceOffset } = this.state;
+  render(): React.ReactElement {
+    const { sliceOffset, text } = this.state;
 
     return (
       <div className="bg">
