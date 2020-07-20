@@ -1,0 +1,5 @@
+.button {
+  background: white;
+  padding: 1em;
+  font-size: calc(2px + 2vmin);
+}

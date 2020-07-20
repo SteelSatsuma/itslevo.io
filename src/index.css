@@ -3,6 +3,11 @@
   src: local('MajorMonoDisplay'), url(./fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'Heebo-VariableFont_wght';
+  src: local('Heebo-VariableFont_wght'), url(./fonts/Heebo/Heebo-VariableFont_wght.ttf) format('truetype');
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,6 +15,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #25537B;
+  transition: background-color 0.5s linear;
 }
 
 code {
