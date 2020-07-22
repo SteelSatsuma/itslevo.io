@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import styles from './style.css';
 
 class Background extends React.Component{
 
@@ -23,11 +23,11 @@ class Background extends React.Component{
     const { sliceOffset, text } = this.state;
 
     return (
-      <div className="bg">
-        <div className="text">
+      <div className={styles.bg}>
+        <div className={styles.text}>
           {text.slice(sliceOffset)}
         </div>
-        <div className="overlay">
+        <div className={styles.overlay}>
         </div>
       </div>
     );

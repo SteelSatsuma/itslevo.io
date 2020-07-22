@@ -1,9 +1,9 @@
 import React from 'react';
-import './style.css';
+import styles from './style.css';
 
 function ContentBlock ({ children } : { children: React.ReactElement }) {
   return (
-    <div className="contentBlock">
+    <div className={styles.contentBlock}>
       {children}
     </div>
   )

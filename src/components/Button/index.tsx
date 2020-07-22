@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './style.css';
+import styles from './style.css';
 
 interface IButton {
   children?: React.ReactElement | string;
@@ -11,9 +11,9 @@ interface IButton {
 
 function Button ({ children, func, text } : IButton) {
   return (
-    <button className="button" onClick={func}>
+    <button className={styles.button} onClick={func}>
       { text &&
-        <div className="text">{text}</div>
+        <div className={styles.text}>{text}</div>
       }
       {children}
     </button>

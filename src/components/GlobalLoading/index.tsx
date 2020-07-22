@@ -1,11 +1,11 @@
 import React from 'react';
 
-import './style.css';
+import styles from './style.css';
 
 function GlobalLoading () {
   return (
-    <div className="container">
-      <div className="loadingElement">Loading...</div>
+    <div className={styles.container}>
+      <div className={styles['loading-element']}>Loading...</div>
     </div>
   )
 };

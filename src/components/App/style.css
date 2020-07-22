@@ -1,17 +1,17 @@
-.App {
+.app {
   font-family: 'Heebo-VariableFont_wght';
   margin: 0 1%;
 }
 
-.App-header {
+.app-header {
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-header h1{
+.app-header h1{
   margin: 0;
 }
 
-.App-link {
+.app-link {
   color: #61dafb;
 }

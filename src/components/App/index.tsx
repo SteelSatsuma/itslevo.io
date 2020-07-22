@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import styles from './style.css';
 import Background from '../Background';
 import GlobalLoading from '../GlobalLoading';
 import ContentBlock from '../ContentBlock';
@@ -21,9 +21,9 @@ class App extends React.PureComponent {
     }
 
     return (
-      <div className="App">
+      <div className={styles.app}>
         <ContentBlock>
-          <header className="App-header">
+          <header className={styles['app-header']}>
             <h1>HELLO</h1>
             <p>
               This is a website of Levon Barsegjan.
@@ -32,7 +32,7 @@ class App extends React.PureComponent {
               It is currently under construction.
             </p>
             <a
-              className="App-link"
+              className={styles['app-link']}
               href="https://github.com/SteelSatsuma/itslevo.io"
               target="_blank"
               rel="noopener noreferrer"
