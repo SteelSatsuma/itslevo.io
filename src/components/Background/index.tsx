@@ -1,19 +1,29 @@
 import React from 'react';
 import styles from './style.css';
 
-class Background extends React.Component{
+interface IProps {
+  state: 'underconstruction' | 'loading' | 'ready'
+}
 
-  sourceString: string = 'underconstruction'
+class Background extends React.Component<IProps>{
 
-  readonly state = {
-    sliceOffset: 0,
-    text: new Array(100).fill(this.sourceString).join('')
+  readonly state: any = {
+    sourceString: 'loading',
+    sliceOffset: 0
+  }
+
+  static getDerivedStateFromProps(props: IProps) {
+    const sourceString = props.state === 'loading' ? 'loading' : 'underconstruction';
+    return {
+      sourceString,
+      text: new Array(100).fill(sourceString).join('')
+    };
   }
 
   componentDidMount(): void {
     window.setInterval(
       () => this.setState({
-        sliceOffset:  this.state.sliceOffset > this.sourceString.length ? 0 : this.state.sliceOffset + 1
+        sliceOffset:  this.state.sliceOffset > this.state.sourceString.length ? 0 : this.state.sliceOffset + 1
       }),
       1000
     );

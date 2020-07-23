@@ -6,6 +6,7 @@
 @font-face {
   font-family: 'Heebo-VariableFont_wght';
   src: local('Heebo-VariableFont_wght'), url(./fonts/Heebo/Heebo-VariableFont_wght.ttf) format('truetype');
+  font-display: swap;
 }
 
 body {
@@ -17,6 +18,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #25537B;
   transition: background-color 0.5s linear;
+  color: white;
 }
 
 code {

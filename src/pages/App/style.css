@@ -1,11 +1,10 @@
 .app {
   font-family: 'Heebo-VariableFont_wght';
-  margin: 0 1%;
+  margin: 1em 1%;
 }
 
 .app-header {
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .app-header h1{

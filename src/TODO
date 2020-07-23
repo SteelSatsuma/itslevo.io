@@ -1,9 +1,14 @@
 - Clear out cruft
 - Organise component structure
+-- type definitons for each component file
+-- tests
 - Look up webpack optimisations
 - Organise CSS variables
+- Responsive
 - Funky background intro
+-- store visualisation playback variable in localhost (+ Redux)
 - Message
-- Upload
 - Showcase components
+-- Links to codepen and github
 - Analytics
+- custom referrer link

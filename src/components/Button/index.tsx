@@ -1,6 +1,7 @@
 import React from 'react';
-
 import styles from './style.css';
+
+// This is a stand-in for a simple button component
 
 interface IButton {
   children?: React.ReactElement | string;
