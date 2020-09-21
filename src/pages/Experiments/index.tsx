@@ -1,7 +1,12 @@
 import React from 'react';
 
+import Reader from '../../components/Reader';
+
 export default function Experiments () {
   return (
-    <div>Experiments</div>
+    <div>
+      <div>Experiments</div>
+      <Reader elements={[]} />
+    </div>
   );
 }

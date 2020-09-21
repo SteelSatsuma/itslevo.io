@@ -1,7 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux'
+import { Dispatch } from 'redux';
+import { animation } from '../../redux/actions';
+
 import styles from './style.css';
+import {IProps, IState} from './types';
+
 import Background from '../../components/Background';
-import GlobalLoading from '../../components/GlobalLoading';
 import ContentBlock from '../../components/ContentBlock';
 import Button from '../../components/Button';
 import NavBar from '../../components/NavBar';
@@ -16,15 +21,18 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
-// loading state in background?
-class App extends React.PureComponent {
+
+export class App extends React.PureComponent<IProps, IState> {
 
   state = {
     mounted: false
   }
 
   componentDidMount() {
-    window.addEventListener('load', () => this.setState({ mounted: true }));
+    window.addEventListener('load', () => {
+      this.setState({ mounted: true })
+      this.props.animationCompleted();
+    });
   }
 
   render() {
@@ -74,4 +82,8 @@ class App extends React.PureComponent {
   }
 }
 
-export default App;
+const mapDispatchToProps = (dispatch: Dispatch) => ({
+  animationCompleted: () => dispatch(animation.animationCompleted())
+})
+
+export default connect(null, mapDispatchToProps)(App);

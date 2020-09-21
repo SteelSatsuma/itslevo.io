@@ -1,0 +1,13 @@
+.container {
+  border: 1px solid white;
+}
+
+.left-column {
+  display: inline-block;
+  width: 33%;
+  border-right: 1px solid white;
+}
+
+.content {
+  display: inline-block;
+}

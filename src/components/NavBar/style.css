@@ -10,9 +10,9 @@
 .navigation a{
   color: white;
   margin: 1em;
-  border: 1px solid white;
+  text-decoration: none;
 }
 
 .navigation .active {
-  border: none;
+  border-bottom: 3px solid white;
 }
